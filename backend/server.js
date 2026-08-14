@@ -29,6 +29,7 @@ app.post("/api/chat", async (req, res) => {
     );
     const data = await response.json();
     console.log(JSON.stringify(data, null, 2));
+    
     const aiReply = data.candidates[0].content.parts[0].text;
 
     res.status(200).json({ reply: aiReply });

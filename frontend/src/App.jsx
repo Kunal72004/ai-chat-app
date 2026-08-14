@@ -45,13 +45,13 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#262624] p-4">
-      <div className="w-full max-w-md bg-[#30302E] rounded-xl shadow-md p-4">
+      <div className="w-full max-w-4xl bg-[#30302E] rounded-xl shadow-md p-4">
         <h1 className="text-lg font-medium mb-3 text-[#FAF9F6] flex items-center gap-2">
           <FiMessageCircle size={20} className="text-[#C96442]" />
           AI Chat App
         </h1>
 
-        <div className="bg-[#262624] border border-[#3E3E3B] rounded-lg p-3 h-72 overflow-y-auto flex flex-col gap-3">
+        <div className="bg-[#262624] border border-[#3E3E3B] rounded-lg p-3 h-[70vh] overflow-y-auto flex flex-col gap-3">
           {messages.map((msg, idx) => (
             <div
               key={idx}
@@ -112,6 +112,7 @@ const App = () => {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e)=> e.key === "Enter" && sendMessage() }
             placeholder="write a message..."
             className="flex-1 bg-[#30302E] border border-[#3E3E3B] rounded-lg px-3 py-2 text-sm text-[#FAF9F6] placeholder-[#A8A6A0] outline-none focus:border-[#C96442]"
             type="text"
