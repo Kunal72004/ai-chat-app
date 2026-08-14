@@ -23,7 +23,7 @@ const CodeBlock = ({ className, children }) => {
       >
         {copied ? "Copied!" : "Copy"}
       </button>
-      <SyntaxHighlighter language={language} style={oneDark} customStyle={{ borderRadius: "8px" }}>
+      <SyntaxHighlighter language={language} style={oneDark} customStyle={{ borderRadius: "8px" }} className="overflow-x-auto scrollbar-thin">
         {codeText}
       </SyntaxHighlighter>
     </div>

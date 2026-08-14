@@ -51,7 +51,7 @@ const App = () => {
           AI Chat App
         </h1>
 
-        <div className="bg-[#262624] border border-[#3E3E3B] rounded-lg p-3 h-[70vh] overflow-y-auto flex flex-col gap-3">
+        <div className="bg-[#262624] border border-[#3E3E3B] rounded-lg p-3 h-[70vh] overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 flex flex-col gap-3">
           {messages.map((msg, idx) => (
             <div
               key={idx}
